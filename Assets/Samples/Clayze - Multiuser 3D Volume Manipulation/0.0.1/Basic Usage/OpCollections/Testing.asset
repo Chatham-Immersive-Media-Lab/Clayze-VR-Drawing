@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ConnectionStatus: 3
   _socketSettings:
-    connectionURL: 
+    connectionURL: wss://clayzeserver.hdyar.com:443/test
     recentConnectionURLs:
     - wss://clayzeserver.hdyar.com:443/test
   localStatus: Stopped

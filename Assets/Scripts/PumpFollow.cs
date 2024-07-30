@@ -19,10 +19,8 @@ public class PumpFollow : MonoBehaviour
     void Update()
     {
         PumpBase.position = new Vector3(TrackedHandle.position.x, PumpBase.position.y, TrackedHandle.position.z);
-
-        var RotatedX = TrackedHandle.rotation.x - 90;
         
-        PumpBase.rotation = new Quaternion(RotatedX, TrackedHandle.rotation.y, TrackedHandle.rotation.z,
-            TrackedHandle.rotation.w);
+        //PumpBase.rotation = new Quaternion(TrackedHandle.rotation.x, TrackedHandle.rotation.y, TrackedHandle.rotation.z,
+            //TrackedHandle.rotation.w);
     }
 }
