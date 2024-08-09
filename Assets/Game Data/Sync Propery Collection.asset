@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd79a95b4aaf44139e10c093bb610114, type: 3}
+  m_Name: Sync Propery Collection
+  m_EditorClassIdentifier: 
+  ConnectionStatus: 0
+  _socketSettings:
+    connectionURL: https://clayzeserver.hdyar.com/store/a
+    recentConnectionURLs: []
+  _values:
+  - {fileID: 11400000, guid: 89a072b0b1fa99944ae3e9595c325551, type: 2}
