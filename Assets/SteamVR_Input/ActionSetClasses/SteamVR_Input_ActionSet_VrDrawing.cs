@@ -32,5 +32,13 @@ namespace Valve.VR
                 return SteamVR_Actions.vrDrawing_TriggerDraw;
             }
         }
+        
+        public virtual SteamVR_Action_Boolean DepthGrip
+        {
+            get
+            {
+                return SteamVR_Actions.vrDrawing_DepthGrip;
+            }
+        }
     }
 }

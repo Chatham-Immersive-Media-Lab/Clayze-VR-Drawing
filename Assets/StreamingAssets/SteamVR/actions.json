@@ -90,6 +90,10 @@
     {
       "name": "/actions/VrDrawing/in/TriggerDraw",
       "type": "vector1"
+    },
+    {
+      "name": "/actions/VrDrawing/in/DepthGrip",
+      "type": "boolean"
     }
   ],
   "action_sets": [

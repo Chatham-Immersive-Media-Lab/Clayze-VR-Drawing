@@ -8,6 +8,7 @@ public class DrawingInput : MonoBehaviour
     public SteamVR_Action_Boolean cursorAppear;
 
     public SteamVR_Action_Single cursorDraw;
+
     
     public SteamVR_Input_Sources handType;
 
@@ -25,6 +26,7 @@ public class DrawingInput : MonoBehaviour
         cursorDraw.AddOnAxisListener(TriggerHold, handType);
 
         cursor.GetComponent<MeshRenderer>().enabled = false;
+       
     }
 
     // Update is called once per frame
@@ -33,11 +35,12 @@ public class DrawingInput : MonoBehaviour
         cursor.gameObject.transform.position = cursorPos.position;
     }
 
+    
     public void TriggerPress(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
     {
         cursor.GetComponent<MeshRenderer>().enabled = true;
     }
-
+    
     public void TriggerRelease(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
     {
         cursor.GetComponent<MeshRenderer>().enabled = false;
