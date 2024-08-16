@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ConnectionStatus: 0
   _socketSettings:
-    connectionURL: https://clayzeserver.hdyar.com/store/a
+    connectionURL: wss://clayzeserver.hdyar.com/a
     recentConnectionURLs: []
   _values:
   - {fileID: 11400000, guid: 89a072b0b1fa99944ae3e9595c325551, type: 2}

@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 333952830}
   - component: {fileID: 333952831}
+  - component: {fileID: 333952832}
   m_Layer: 0
   m_Name: Drawing Manager
   m_TagString: Untagged
@@ -168,6 +169,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _propertyCollection: {fileID: 11400000, guid: 55a6f4fb796545b43b797a435bd0dabb,
     type: 2}
+--- !u!114 &333952832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333952829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d648b04d1eca4c7b8144256b24fb2243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PropertyCollection: {fileID: 11400000, guid: 55a6f4fb796545b43b797a435bd0dabb, type: 2}
+  updateFrequency: 0.2
 --- !u!1 &869314798
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +326,52 @@ MonoBehaviour:
     type: 3}
   minRadius: 0.1
   _minTime: 0.02
+--- !u!1 &1786390947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1786390948}
+  - component: {fileID: 1786390949}
+  m_Layer: 0
+  m_Name: Environment Loader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1786390948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786390947}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.1069126, y: 3.2370963, z: 3.3668346}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1786390949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786390947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53f7ede06e446cc45a5f0ec73fc0fce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: Assets/Scenes/SampleScene.unity
+  LoadOnStart: 0
 --- !u!1 &2052521923
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,3 +547,4 @@ SceneRoots:
   - {fileID: 1224425879}
   - {fileID: 333952830}
   - {fileID: 2052521924}
+  - {fileID: 1786390948}

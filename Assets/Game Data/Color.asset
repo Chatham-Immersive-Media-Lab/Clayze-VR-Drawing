@@ -15,5 +15,5 @@ MonoBehaviour:
   IsDirty: 0
   ID: 0
   IsInitialOwner: 0
-  IsOwner: 1
+  IsOwner: 0
   _value: {r: 0, g: 0, b: 0, a: 0}
