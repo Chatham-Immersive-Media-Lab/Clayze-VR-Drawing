@@ -81,6 +81,19 @@
       "name": "/actions/mixedreality/in/ExternalCamera",
       "type": "pose",
       "requirement": "optional"
+    },
+    {
+      "name": "/actions/VrDrawing/in/TriggerPress",
+      "type": "boolean",
+      "requirement": "suggested"
+    },
+    {
+      "name": "/actions/VrDrawing/in/TriggerDraw",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/VrDrawing/in/DepthGrip",
+      "type": "boolean"
     }
   ],
   "action_sets": [
@@ -98,6 +111,10 @@
     },
     {
       "name": "/actions/mixedreality",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/VrDrawing",
       "usage": "single"
     }
   ],

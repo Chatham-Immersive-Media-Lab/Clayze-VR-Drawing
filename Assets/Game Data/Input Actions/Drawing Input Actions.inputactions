@@ -1,0 +1,46 @@
+{
+    "name": "Drawing Input Actions",
+    "maps": [
+        {
+            "name": "Drawing",
+            "id": "88943e2a-5b51-4534-9e8f-0305175311bd",
+            "actions": [
+                {
+                    "name": "Draw",
+                    "type": "Value",
+                    "id": "a6299807-7711-4b9d-9ca9-0bda65e237b4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2694bab7-7d01-45c9-bab2-082a26852619",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "Draw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "PC",
+            "bindingGroup": "PC",
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
