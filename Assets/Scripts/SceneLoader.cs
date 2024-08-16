@@ -21,6 +21,6 @@ public class SceneLoader : MonoBehaviour
     private void LoadScene()
     {
         //path not name?
-        SceneManager.LoadScene(Scene);
+        SceneManager.LoadScene(Scene, LoadSceneMode.Additive);
     }
 }
