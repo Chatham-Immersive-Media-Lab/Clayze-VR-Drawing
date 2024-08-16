@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd79a95b4aaf44139e10c093bb610114, type: 3}
-  m_Name: Sync Propery Collection
+  m_Name: PropCol Thing
   m_EditorClassIdentifier: 
   ConnectionStatus: 0
   _socketSettings:
@@ -18,3 +18,4 @@ MonoBehaviour:
     recentConnectionURLs: []
   _values:
   - {fileID: 11400000, guid: 89a072b0b1fa99944ae3e9595c325551, type: 2}
+  - {fileID: 11400000, guid: 5db74312ce220094495a2ee14b40ea72, type: 2}

@@ -5,16 +5,17 @@ using SyncedProperty;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using Valve.VR;
 
 public class VRPenInput : MonoBehaviour
 {
     public SyncColor color;
     public float BaseThickness;
     public InkManager3D InkManager;
-    [FormerlySerializedAs("DrawReference")] public InputActionReference DrawInput;//0 is off, 1 is on full, 0.5 if half thick
-
+    private bool drawing;
+    private float _input =0;
     [Header("Pen Settings")]
-    [Tooltip("Distance pen must move in world space beffore a new point is added.")]
+    [Tooltip("Distance pen must move in world space before a new point is added.")]
     [SerializeField]
     private float minRadius = 0.1f;
 
@@ -24,28 +25,36 @@ public class VRPenInput : MonoBehaviour
     private float _lastAddTime = Mathf.Infinity;
     
     private Stroke3 _currentStroke;
+    
+    public SteamVR_Action_Single cursorDraw;
+
+    public Transform spawnPos;
+    
     // Start is called before the first frame update
     void Start()
     {
-        DrawInput.action.Enable();
+        // SteamVR_Actions._default.Activate();
+        SteamVR_Actions.VrDrawing.Activate();
+        // SteamVR_Actions.vrDrawing_TriggerDraw.Activate();
     }
 
     // Update is called once per frame
     void Update()
     {
         _lastAddTime += Time.deltaTime;
-        var input = DrawInput.action.ReadValue<float>();
+        var input = cursorDraw.axis;
+
         CheckPenInputTick(input);
         CheckPenDragTick(input);
         CheckPenReleaseTick(input);
     }
-
-  
+    
     private void CheckPenInputTick(float input)
     {
         //press
         if (input > 0 && _currentStroke == null)
         {
+            Debug.Log("Start");
             _currentStroke = InkManager.StartStroke(0, true, color.Value, BaseThickness);
         }
     }
@@ -65,7 +74,6 @@ public class VRPenInput : MonoBehaviour
                         return;
                     }
                 }
-
                 _currentStroke.AddPoint(NewPointAtCurrent(input));
                 _lastAddTime = 0;
             }
@@ -76,11 +84,12 @@ public class VRPenInput : MonoBehaviour
             }
         }
     }
-
+    
     private void CheckPenReleaseTick(float input)
     {
         if (input <= 0 && _currentStroke != null)
         {
+            Debug.Log("Finish");
             _currentStroke.Finish();
             _currentStroke = null;
         }
@@ -90,6 +99,6 @@ public class VRPenInput : MonoBehaviour
     private InkPoint3 NewPointAtCurrent(float width)
     {
         byte w = (byte)(Mathf.Clamp01(width)*255);
-        return new InkPoint3(transform.position, w);
+        return new InkPoint3(spawnPos.position, w);
     }
 }
